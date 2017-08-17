@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web1:
+    image: nginx:stable-alpine
+    ports:
+      - "80"
+
+  web2:
+    image: 192.168.99.100:5000/swarm-demo:v1
+    ports:
+      - "80"
+

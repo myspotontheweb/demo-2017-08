@@ -1,0 +1,69 @@
+
+= Containers what's the big deal?
+
+:imagesdir: images
+
+== What is a container?
+
+image::https://f5.com/Portals/1/Images/whitepaper-images/using-docker-container-technology-with-f5-products-and-services/WP-AG-AMER-54662827-dockers-tech-diagrams-v7-DIAG-1.png[]
+
+
+== What's all the excitement about?
+
+=== Docker standardized the workflow
+
+image::https://docs.docker.com/engine/article-img/architecture.svg[]
+
+Containers have been arround for a while
+
+=== All about immutable infrastructure 
+
+image::https://www.toysperiod.com/images/lego-parts.jpg[]
+
+=== Docker is a packaging standard
+
+image::https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAARwAAAAJGFiZTgxYWMyLWZiN2ItNDY2OC04NDI2LTBmYWQ2NzFlZTgzNA.jpg[]
+
+=== Makes applications portable
+
+image::http://lh5.ggpht.com/_M1v-B4l0khY/TTXCao3xSeI/AAAAAAAAAqw/KL2s3B0LyYo/s400/fish.jpg[]
+
+=== Why was Docker popular?
+
+* Docker used the rapid provisioning and shared file system of containers  
+
+== Complementary innovations
+
+* Shift to microservice architectures
+* 12 factor application recommendations
+* Cloud native applications
+
+== The emerging importance of orchestration
+
+Docker focuses on a single machine, running applications reliably at scale is harder
+ 
+* Kubernetes
+* Docker Swarm
+* Apache Mesos
+
+Going to hear a lot more about Kubernetes, which is leading the pack
+
+=== What good is a scheduler?
+
+. hides the details of resource management and failure handling so its users can focus on application development instead
+. operates with very high reliability and availability, and supports applications that do the same
+. lets us run workloads across tens of thousands of machines effectively.
+
+== Demo time
+
+. Build an image and deploy it using "docker-compose". How our current DevEnv works
+. Build the same image and deploy it to kubernetes. How we're doing production deploys.
+
+[NOTE]
+======
+Explain some of the reasons why there are two approaches and some ideas on how we plan to converge them.
+======
+
+== Recap
+
+
