@@ -8,7 +8,7 @@ services:
       kompose.service.type: LoadBalancer
 
   web2:
-    image: 192.168.99.100:5000/k8s-demo:v1
+    image: k8s-demo:v1
     ports:
       - "80"
     labels:

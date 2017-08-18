@@ -41,7 +41,7 @@ Pets versus Cattle
 
 image::http://www.abc.net.au/radionational/image/6443554-3x2-700x467.jpg[]
 
-Google have been using containers for nearly 10 years
+Google have been using containers for a long time...
 
 === Clouds
 
@@ -86,7 +86,9 @@ Datacenter operating system managing container workloads
 
 == Recap
 
-* Difference between container and a virtual machine
-* The impact of Docker on application packaging
-* The larger challenge is running Docker at scale
+* Hopefully we now  have a high level understanding of:
+
+.. difference between a container and a virtual machine 
+.. the impact Docker has had on application packaging and delivery 
+.. that the larger challenge is operating containers at scale 
 

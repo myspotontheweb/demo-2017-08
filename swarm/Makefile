@@ -9,3 +9,5 @@ build:
 deploy:
 	docker service create -d --replicas 3 -p 80 --name demo  $(REGISTRY)/swarm-demo:v1
 
+clean:
+	docker service rm demo
