@@ -81,8 +81,8 @@ Datacenter operating system managing container workloads
 
 == Demo time
 
-. Docker swarm deploy
-. Kubernetes deploy
+. https://github.com/myspotontheweb/demo-2017-08/tree/master/swarm[Docker swarm deploy]
+. https://github.com/myspotontheweb/demo-2017-08/tree/master/k8s[Kubernetes deploy]
 
 == Recap
 
