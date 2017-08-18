@@ -1,4 +1,4 @@
-.PHONY: deploy
+.PHONY: build deploy clean
 REGISTRY=$(shell docker-machine ip k8s-registry):5000
 
 build:

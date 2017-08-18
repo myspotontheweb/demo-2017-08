@@ -1,4 +1,4 @@
-.PHONY: deploy
+.PHONY: build deploy
 REGISTRY=$(shell docker-machine ip swarm-registry):5000
 
 build:
