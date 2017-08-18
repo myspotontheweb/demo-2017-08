@@ -1,5 +1,7 @@
 
-= Containers what's the big deal?
+= Containers
+
+what's the big deal?
 
 :imagesdir: images
 
@@ -8,62 +10,83 @@
 image::https://f5.com/Portals/1/Images/whitepaper-images/using-docker-container-technology-with-f5-products-and-services/WP-AG-AMER-54662827-dockers-tech-diagrams-v7-DIAG-1.png[]
 
 
-== What's all the excitement about?
+== But what did Docker ever do for us?
 
-=== Docker standardized the workflow
+image::https://i.ytimg.com/vi/Y7tvauOJMHo/hqdefault.jpg[]
+
+
+=== Standardized workflow
 
 image::https://docs.docker.com/engine/article-img/architecture.svg[]
 
-Containers have been arround for a while
+Container tech existed before Docker
 
-=== All about immutable infrastructure 
-
-image::https://www.toysperiod.com/images/lego-parts.jpg[]
-
-=== Docker is a packaging standard
+=== Packaging standard
 
 image::https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAARwAAAAJGFiZTgxYWMyLWZiN2ItNDY2OC04NDI2LTBmYWQ2NzFlZTgzNA.jpg[]
+
+Lighter than a virtual machine image
 
 === Makes applications portable
 
 image::http://lh5.ggpht.com/_M1v-B4l0khY/TTXCao3xSeI/AAAAAAAAAqw/KL2s3B0LyYo/s400/fish.jpg[]
 
-=== Why was Docker popular?
+=== All about immutable infrastructure 
 
-* Docker used the rapid provisioning and shared file system of containers  
+image::https://www.toysperiod.com/images/lego-parts.jpg[]
 
-== Complementary innovations
+Pets versus Cattle
 
-* Shift to microservice architectures
-* 12 factor application recommendations
-* Cloud native applications
+== Bigger picture
 
-== The emerging importance of orchestration
+image::http://www.abc.net.au/radionational/image/6443554-3x2-700x467.jpg[]
 
-Docker focuses on a single machine, running applications reliably at scale is harder
- 
-* Kubernetes
+Google have been using containers for nearly 10 years
+
+=== Clouds
+
+image::http://3thlkd3wpu0u1x0qbt19cxc8-wpengine.netdna-ssl.com/wp-content/uploads/2015/05/cloudstorage.jpg[]
+
+* Scaling up is hard 
+* Applications can be spread across lots of servers
+
+=== Resiliency
+
+image::http://www.maxta.com/wp-content/uploads/disasterrecovery-300x265.gif[]
+
+* Automate recovery
+* Relocatable workloads
+
+
+=== Efficient workload placement
+
+image::https://storage.googleapis.com/cdn.thenewstack.io/media/2016/05/command-after-1024x522.gif[]
+
+
+=== Google's solution
+
+image::https://upload.wikimedia.org/wikipedia/en/a/a1/Picard_as_Locutus.jpg[]
+
+Datacenter operating system managing container workloads
+
+=== Options for running Docker at scale  
+
+* Kubernetes 
+** Borg's little brother, originally called seven of nine!
+** Largest developer community
 * Docker Swarm
+** Competing tech, built into the Docker engine
 * Apache Mesos
-
-Going to hear a lot more about Kubernetes, which is leading the pack
-
-=== What good is a scheduler?
-
-. hides the details of resource management and failure handling so its users can focus on application development instead
-. operates with very high reliability and availability, and supports applications that do the same
-. lets us run workloads across tens of thousands of machines effectively.
+** Now almost forgotten
 
 == Demo time
 
-. Build an image and deploy it using "docker-compose". How our current DevEnv works
-. Build the same image and deploy it to kubernetes. How we're doing production deploys.
-
-[NOTE]
-======
-Explain some of the reasons why there are two approaches and some ideas on how we plan to converge them.
-======
+. Docker swarm deploy
+. Kubernetes deploy
 
 == Recap
 
+* Difference between container and a virtual machine
+* The impact of Docker on application packaging
+* The larger challenge is running Docker at scale
 
