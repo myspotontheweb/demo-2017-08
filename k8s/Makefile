@@ -7,7 +7,7 @@ build:
 	docker push $(REGISTRY)/k8s-demo:v1
 
 deploy:
-	kubectl run demo --image=$(REGISTRY)/k8s-demo:v1 --port 80
+	kubectl run demo --image=$(REGISTRY)/k8s-demo:v1 --replicas 3 --port 80
 	kubectl expose deployment demo --type LoadBalancer
 
 clean:
