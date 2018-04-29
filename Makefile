@@ -13,7 +13,7 @@ pdf: $(PDF)
 %.html: %.adoc
 	if [ ! -d reveal.js ]; then git clone -b 3.0.0 https://github.com/hakimel/reveal.js.git; fi
 	if [ ! -d asciidoctor-reveal.js ]; then git clone https://github.com/asciidoctor/asciidoctor-reveal.js; fi
-	asciidoctorj -T asciidoctor-reveal.js/templates/slim -r asciidoctor-diagram -b revealjs $<
+	asciidoctor -T asciidoctor-reveal.js/templates -r asciidoctor-diagram -b revealjs $<
 
 %.pdf: %.html
 	docker run --rm -v `pwd`:/pwd astefanutti/decktape /pwd/$< /pwd/$@

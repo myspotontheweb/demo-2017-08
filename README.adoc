@@ -17,13 +17,13 @@ image::https://i.ytimg.com/vi/Y7tvauOJMHo/hqdefault.jpg[]
 
 === Standardized workflow
 
-image::https://docs.docker.com/engine/article-img/architecture.svg[]
+image::http://www.solidalm.com/wp-content/uploads/2018/04/docker-build-ship-run-workflowa.png[]
 
 Container tech existed before Docker
 
 === Packaging standard
 
-image::https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAARwAAAAJGFiZTgxYWMyLWZiN2ItNDY2OC04NDI2LTBmYWQ2NzFlZTgzNA.jpg[]
+image::https://zdnet2.cbsistatic.com/hub/i/r/2017/05/08/af178c5a-64dd-4900-8447-3abd739757e3/resize/770xauto/78abd09a8d41c182a28118ac0465c914/docker-vm-container.png[]
 
 Lighter than a virtual machine image
 
