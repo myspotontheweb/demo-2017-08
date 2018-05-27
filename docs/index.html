@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><title>Containers</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme" /><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet" /><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? "reveal.js/css/print/pdf.css" : "reveal.js/css/print/paper.css";
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="reveal.js/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Containers</h1><div class="preamble"><div class="paragraph"><p>what&#8217;s the big deal?</p></div></div></section>
+<section id="what_is_a_container"><h2>What is a container?</h2><div class="imageblock" style=""><img src="https://f5.com/Portals/1/Images/whitepaper-images/using-docker-container-technology-with-f5-products-and-services/WP-AG-AMER-54662827-dockers-tech-diagrams-v7-DIAG-1.png" alt="WP AG AMER 54662827 dockers tech diagrams v7 DIAG 1" /></div></section>
+<section><section id="but_what_did_docker_ever_do_for_us"><h2>But what did Docker ever do for us?</h2><div class="imageblock" style=""><img src="https://i.ytimg.com/vi/Y7tvauOJMHo/hqdefault.jpg" alt="hqdefault" /></div></section><section id="standardized_workflow"><h2>Standardized workflow</h2><div class="imageblock" style=""><img src="http://www.solidalm.com/wp-content/uploads/2018/04/docker-build-ship-run-workflowa.png" alt="docker build ship run workflowa" /></div>
+<div class="paragraph"><p>Container tech existed before Docker</p></div></section><section id="packaging_standard"><h2>Packaging standard</h2><div class="imageblock" style=""><img src="https://zdnet2.cbsistatic.com/hub/i/r/2017/05/08/af178c5a-64dd-4900-8447-3abd739757e3/resize/770xauto/78abd09a8d41c182a28118ac0465c914/docker-vm-container.png" alt="docker vm container" /></div>
+<div class="paragraph"><p>Lighter than a virtual machine image</p></div></section><section id="makes_applications_portable"><h2>Makes applications portable</h2><div class="imageblock" style=""><img src="http://lh5.ggpht.com/_M1v-B4l0khY/TTXCao3xSeI/AAAAAAAAAqw/KL2s3B0LyYo/s400/fish.jpg" alt="fish" /></div></section><section id="all_about_immutable_infrastructure"><h2>All about immutable infrastructure</h2><div class="imageblock" style=""><img src="https://www.toysperiod.com/images/lego-parts.jpg" alt="lego parts" /></div>
+<div class="paragraph"><p>Pets versus Cattle</p></div></section></section>
+<section><section id="bigger_picture"><h2>Bigger picture</h2><div class="imageblock" style=""><img src="http://www.abc.net.au/radionational/image/6443554-3x2-700x467.jpg" alt="6443554 3x2 700x467" /></div><div class="paragraph"><p>Google have been using containers for a long time&#8230;&#8203;</p></div></section><section id="clouds"><h2>Clouds</h2><div class="imageblock" style=""><img src="http://3thlkd3wpu0u1x0qbt19cxc8-wpengine.netdna-ssl.com/wp-content/uploads/2015/05/cloudstorage.jpg" alt="cloudstorage" /></div>
+<div class="ulist"><ul><li><p>Scaling up is hard</p></li><li><p>Applications can be spread across lots of servers</p></li></ul></div></section><section id="resiliency"><h2>Resiliency</h2><div class="imageblock" style=""><img src="http://www.maxta.com/wp-content/uploads/disasterrecovery-300x265.gif" alt="disasterrecovery 300x265" /></div>
+<div class="ulist"><ul><li><p>Automate recovery</p></li><li><p>Relocatable workloads</p></li></ul></div></section><section id="efficient_workload_placement"><h2>Efficient workload placement</h2><div class="imageblock" style=""><img src="https://storage.googleapis.com/cdn.thenewstack.io/media/2016/05/command-after-1024x522.gif" alt="command after 1024x522" /></div></section><section id="google_s_solution"><h2>Google&#8217;s solution</h2><div class="imageblock" style=""><img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Picard_as_Locutus.jpg" alt="Picard as Locutus" /></div>
+<div class="paragraph"><p>Datacenter operating system managing container workloads</p></div></section><section id="options_for_running_docker_at_scale"><h2>Options for running Docker at scale</h2><div class="ulist"><ul><li><p>Kubernetes</p><div class="ulist"><ul><li><p>Borg&#8217;s little brother, originally called seven of nine!</p></li><li><p>Largest developer community</p></li></ul></div></li><li><p>Docker Swarm</p><div class="ulist"><ul><li><p>Competing tech, built into the Docker engine</p></li></ul></div></li><li><p>Apache Mesos</p><div class="ulist"><ul><li><p>Now almost forgotten</p></li></ul></div></li></ul></div></section></section>
+<section id="demo_time"><h2>Demo time</h2><div class="olist arabic"><ol class="arabic"><li><p><a href="https://github.com/myspotontheweb/demo-2017-08/tree/master/swarm">Docker swarm deploy</a></p></li><li><p><a href="https://github.com/myspotontheweb/demo-2017-08/tree/master/k8s">Kubernetes deploy</a></p></li></ol></div></section>
+<section id="recap"><h2>Recap</h2><div class="ulist"><ul><li><p>Hopefully we now  have a high level understanding of:</p><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>difference between a container and a virtual machine</p></li><li><p>the impact Docker has had on application packaging and delivery</p></li><li><p>that the larger challenge is operating containers at scale</p></li></ol></div></li></ul></div></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Set a per-slide timing for speaker notes, null means none
+  defaultTiming: null,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Randomizes the order of slides each time the presentation loads
+  shuffle: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Flags if we should show a help overlay when the questionmark
+  // key is pressed
+  help: true,
+  // Flags if speaker notes should be visible to all viewers
+  showNotes: false,
+  // Global override for autolaying embedded media (video/audio/iframe)
+  // - null: Media will only autoplay if data-autoplay is present
+  // - true: All media will autoplay, regardless of individual setting
+  // - false: No media will autoplay, regardless of individual setting
+  autoPlayMedia: null,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'black',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true }
+  ]
+});</script></body></html>

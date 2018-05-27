@@ -1,5 +1,2 @@
-asciidoctor-reveal.js
-reveal.js
-*.html
-*.pdf
 *.swp
+bin

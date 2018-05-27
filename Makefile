@@ -1,27 +1,29 @@
+OUTDIR = docs
+BINDIR = bin
+
 SRC  = $(wildcard *.adoc)
-HTML = $(SRC:.adoc=.html)
-PDF  = $(SRC:.adoc=.pdf)
+HTML = $(OUTDIR)/$(SRC:.adoc=.html)
 
 default: html
 
-all: pdf
-
 html: $(HTML)
 
-pdf: $(PDF)
+$(BINDIR)/asciidoctor-reveal.js: 
+	mkdir $(BINDIR)
+	curl -L https://github.com/asciidoctor/asciidoctor-reveal.js/archive/v1.1.3.tar.gz | tar zx
+	mv -f asciidoctor-reveal.js-1.1.3 $@
 
-%.html: %.adoc
-	if [ ! -d reveal.js ]; then git clone -b 3.0.0 https://github.com/hakimel/reveal.js.git; fi
-	if [ ! -d asciidoctor-reveal.js ]; then git clone https://github.com/asciidoctor/asciidoctor-reveal.js; fi
-	asciidoctor -T asciidoctor-reveal.js/templates -r asciidoctor-diagram -b revealjs $<
+$(OUTDIR)/reveal.js: 
+	mkdir $(OUTDIR)
+	curl -L https://github.com/hakimel/reveal.js/archive/3.6.0.tar.gz | tar zx
+	mv -f reveal.js-3.6.0 $@
 
-%.pdf: %.html
-	docker run --rm -v `pwd`:/pwd astefanutti/decktape /pwd/$< /pwd/$@
+$(OUTDIR)/%.html: %.adoc $(BINDIR)/asciidoctor-reveal.js $(OUTDIR)/reveal.js
+	asciidoctor -T $(BINDIR)/asciidoctor-reveal.js/templates -r asciidoctor-diagram -b revealjs $< -o $@
 
 clean:
-	rm -f *.html *.pdf
-	rm -rf images
+	rm -f $(OUTDIR)/*.html
 
-clean-all: clean
-	rm -rf asciidoctor-reveal.js
-	rm -rf reveal.js
+clean-all: 
+	rm -rf $(OUTDIR)
+	rm -rf $(BINDIR)
